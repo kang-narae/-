@@ -17,8 +17,8 @@ df.index.name='지원 번호'
 print(df)
 
 #csv: 쉼표로 데이터를 구분하는 형식
-# df.to_csv('score.csv',encoding='utf-8-sig')
+df.to_csv('score.csv',encoding='utf-8-sig')
 
-# df.to_csv('score.txt', sep='\t')  #tab 으로 데이터 분리해달라.
+df.to_csv('score.txt', sep='\t')  #tab 으로 데이터 분리해달라.
 
-# df.to_excel('score.xlsx')     index=False 추가하면 인덱스컬럼이 삭제됨
+df.to_excel('score.xlsx')     #index=False 추가하면 인덱스컬럼이 삭제됨
