@@ -22,7 +22,7 @@ df=pd.DataFrame(data)
 # print(df.loc[0])   #이게 row기준.
 # print(df[0:3])   #이런식으로 row 범위 지정해서 뽑아올 수도 있다.
 # print(df[3:4])  #인덱스 범위   3에서 시작, 4 이전까지 즉 3 한 개만 나옴. 위에 콜롬값 나오고.  이건 0부터 세고
-print(df.loc[3:4])   #이러면 인덱스 3번과 4번이 나옴! 이게 더 직관적..
+print(df.loc[3:4])   #이러면 인덱스 3번이 나옴! 이게 더 직관적..
 
 
 df= pd.read_excel('score.xlsx', index_col='지원 번호')
