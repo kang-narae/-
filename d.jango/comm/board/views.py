@@ -16,8 +16,8 @@ def publicData(request):
     url = 'http://api.visitkorea.or.kr/openapi/service/rest/PhotoGalleryService/galleryList?serviceKey={}&pageNo={}&numOfRows=10&MobileOS=ETC&MobileApp=AppTest&arrange=A&_type=json'.format(m_serviceKey, nowpage)
     # params ={'serviceKey' : m_serviceKey, 'pageNo' : '1', 'numOfRows' : '10', 'MobileOS' : 'ETC', 'MobileApp' : 'AppTest', 'arrange' : 'A' }
     response = requests.get(url)
-    contents=response.text
-    json_ob= json.loads(contents)
+    contents=response.text  #json형식의 텍스트를
+    json_ob= json.loads(contents)   #json형식의 객체로
     publicData= json_ob['response']['body']['items']['item']
     print(publicData)
     context={'publicData':publicData}
