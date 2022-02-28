@@ -8,16 +8,15 @@ from fin.models import Covid
 # Create your views here.
 
 
-# def chart(request):
-#     # covidData()
-#     return render(request, 'chart.html')
+def chart(request):
+    covidData()
+    return render(request, 'chart.html')
 
 def plot(request):
-    
     return render(request, 'plot.html')
 
 
-def covidData():  #한번 실행해서 DB에 저장함. 다음엔 다른 방식으로 (파일이라던지.. sql이라던지) 저장해볼까?
+def covidData():
     # m_servicekey= 'kPvWkLn8zX%2FrcSryaV88GKZw89YENVfrgvH06AuvYSrXsHOx6r705chjRSn%2F%2BjrdwYpeOPms5YcVRuYID5eWkA%3D%3D'
     # url='http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson?serviceKey={}&pageNo=1&numOfRows=10&startCreateDt=20200120&endCreateDt=20220119'.format(m_servicekey)
     # response =requests.get(url)
@@ -44,5 +43,5 @@ def covidData():  #한번 실행해서 DB에 저장함. 다음엔 다른 방식�
         date= i['stateDt']
         deathCnt= i['deathCnt']
         decideCnt= i['decideCnt']
-        qs = Covid(date=date, deathCnt=deathCnt, decideCnt=decideCnt)
+        qs = Covid(date=date,intdate=int(date), deathCnt=int(deathCnt), decideCnt=int(decideCnt))
         qs.save()

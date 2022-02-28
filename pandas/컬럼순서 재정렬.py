@@ -6,7 +6,12 @@ data={
 '평점' : [8.88, 9.20, 8.73, 9.16, 8.62, 7.64, 8.83, 9.10]
 }
 df = pd.DataFrame(data)
+
+# print(df)
+df['추천 점수']= df['관객 수']*df['평점']/100
 # print(df)
 
-print(df.sort_values('개봉 연도'))
 
+cols= list(df.columns)
+df= df[[cols[0]]+[cols[-1]]+cols[1:-1]]  #1개는 리스트로 감싸야하는데 이미 리스트인 건 리스트로 감쌀 필요가 없음
+print(df)

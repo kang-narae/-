@@ -16,7 +16,5 @@ plt.plot(df['이름'],df['영어'],linewidth=2, marker='o', ms=10, mfc='red', me
 plt.plot(df['이름'],df['수학'], 'ro--',  linewidth=2,  ms=10,  mec='green' , label='수학')  #축약도 가능
 
 
-# plt.plot(x,y,linewidth=2, marker='o', markersize=10, markerfacecolor='red', markeredgecolor='green' , linestyle='--' , label='추이')
-# plt.plot(x,y,linewidth=2, marker='o', ms=10, mfc='red', mec='green' , ls='--' , label='추이')
 plt.legend()
 plt.show()
