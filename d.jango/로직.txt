@@ -147,3 +147,4 @@ stuNameSearch뷰를 실행해서 = 받아온 값을 통해 qs를 만들어서 co
 *
 render 는 템플릿을 불러오고, redirect 는 URL로 이동합니다.
  URL 로 이동한다는 건 그 URL 에 맞는 views 가 다시 실행될테고 여기서 render 를 할지 다시 redirect 할지 결정할 것 입니다. 
+
